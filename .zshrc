@@ -34,21 +34,21 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # --- Load on Startup ---
-eval "$(starship init zsh)" # Load Starship
-# eval "$(oh-my-posh init zsh)" # Load oh-my-posh
+# eval "$(starship init zsh)" # Load Starship
+eval "$(oh-my-posh init zsh --config ~/.config/omp/pure.omp.json)" # Load oh-my-posh
 source <(fzf --zsh) # Load Fuzzyfinder
 # source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # --- Oh-my-Posh Ignore Terminal ---
 # Important, because Mac Terminal is unsupported
-# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-#   eval "$(oh-my-posh init zsh)"
-# fi
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
 
 # --- zsh History ---
 HISTSIZE=10000
-SAVEHIST=$HISTSIZE                   # Save most-recent 5000 lines
+SAVEHIST=$HISTSIZE                   # Save most-recent 10000 lines
 HISTFILE=~/.zsh_history
 HISTDUP=erase
 setopt appendhistory
@@ -64,7 +64,7 @@ setopt hist_find_no_dups
 alias lzd='lazydocker'
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time" # --no-user --no-permissions"
 #eval "$(bw completion --shell zsh); compdef _bw bw;"
-
+alias darwinize="darwin-rebuild switch --flake ~/.config/nix"
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
