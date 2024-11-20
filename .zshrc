@@ -1,4 +1,4 @@
-## ZINIT
+# --- ZINIT ---
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
@@ -34,11 +34,17 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # --- Load on Startup ---
-eval "$(starship init zsh)" # Loadf Starship
+eval "$(starship init zsh)" # Load Starship
+# eval "$(oh-my-posh init zsh)" # Load oh-my-posh
 source <(fzf --zsh) # Load Fuzzyfinder
 # source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# --- Oh-my-Posh Ignore Terminal ---
+# Important, because Mac Terminal is unsupported
+# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#   eval "$(oh-my-posh init zsh)"
+# fi
 
 # --- zsh History ---
 HISTSIZE=10000
