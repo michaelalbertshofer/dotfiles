@@ -35,7 +35,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # --- Load on Startup ---
 # eval "$(starship init zsh)" # Load Starship
-eval "$(oh-my-posh init zsh --config ~/.config/omp/pure.omp.json)" # Load oh-my-posh
+eval "$(oh-my-posh init zsh --config ~/.config/omp/zen.toml)" # Load oh-my-posh
 source <(fzf --zsh) # Load Fuzzyfinder
 # source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -64,7 +64,7 @@ setopt hist_find_no_dups
 alias lzd='lazydocker'
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time" # --no-user --no-permissions"
 #eval "$(bw completion --shell zsh); compdef _bw bw;"
-alias darwinize="darwin-rebuild switch --flake ~/.config/nix"
+alias darwinize="darwin-rebuild switch --flake ~/Code/Nix"
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
