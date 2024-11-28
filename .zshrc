@@ -1,11 +1,13 @@
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # --- ZINIT ---
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-# --- Powerlevel10k ---
-
+# --- Oh-my-Posh ---
+export PATH=$PATH:/home/michaelalbertshofer/.local/bin
 
 # -- Add in zsh Plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -36,7 +38,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # --- Load on Startup ---
 # eval "$(starship init zsh)" # Load Starship
 eval "$(oh-my-posh init zsh --config ~/.config/omp/zen.toml)" # Load oh-my-posh
-source <(fzf --zsh) # Load Fuzzyfinder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Load Fuzzyfinder
 # source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -109,8 +111,6 @@ _fzf_compgen_dir() {
 
 # --- Bat (better cat) ---
 export BAT_THEME='Nord'
-
-
 
 
 
