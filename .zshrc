@@ -63,14 +63,11 @@ setopt hist_find_no_dups
 
 
 # -- Aliases ---
-alias lzd='lazydocker'
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time" # --no-user --no-permissions"
-#eval "$(bw completion --shell zsh); compdef _bw bw;"
-alias darwinize="darwin-rebuild switch --flake ~/Code/Nix"
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
-export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_CTRL_T_OPTS="--preview 'batcat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 _fzf_comprun() {
   local command=$1
@@ -80,7 +77,7 @@ _fzf_comprun() {
     cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
     export|unset) fzf --preview "eval 'echo $'{}"         "$@" ;;
     ssh)          fzf --preview 'dig {}'                   "$@" ;;
-    *)            fzf --preview "bat -n --color=always --line-range :500 {}" "$@" ;;
+    *)            fzf --preview "batcat -n --color=always --line-range :500 {}" "$@" ;;
   esac
 }
 # --- setup fzf theme ---
@@ -98,15 +95,15 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
     --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 
-# --- Use fd instead of fzf ---
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+# --- Use fd-find instead of fzf ---
+export FZF_DEFAULT_COMMAND="fd-find --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+export FZF_ALT_C_COMMAND="fd-find --type=d --hidden --strip-cwd-prefix --exclude .git"
 _fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
+  fd-find --hidden --exclude .git . "$1"
 }
 _fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
+  fd-find --type=d --hidden --exclude .git . "$1"
 }
 
 # --- Bat (better cat) ---
