@@ -95,15 +95,15 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
     --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 
-# --- Use fd-find instead of fzf ---
-export FZF_DEFAULT_COMMAND="fd-find --hidden --strip-cwd-prefix --exclude .git"
+# --- Use fdfind instead of fzf ---
+export FZF_DEFAULT_COMMAND="fdfind --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd-find --type=d --hidden --strip-cwd-prefix --exclude .git"
+export FZF_ALT_C_COMMAND="fdfind --type=d --hidden --strip-cwd-prefix --exclude .git"
 _fzf_compgen_path() {
-  fd-find --hidden --exclude .git . "$1"
+  fdfind --hidden --exclude .git . "$1"
 }
 _fzf_compgen_dir() {
-  fd-find --type=d --hidden --exclude .git . "$1"
+  fdfind --type=d --hidden --exclude .git . "$1"
 }
 
 # --- Bat (better cat) ---
