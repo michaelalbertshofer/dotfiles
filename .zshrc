@@ -37,7 +37,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # --- Load on Startup ---
 # eval "$(starship init zsh)" # Load Starship
-eval "$(oh-my-posh init zsh --config ~/.config/omp/zen.toml)" # Load oh-my-posh
+eval "$(oh-my-posh init zsh --config ~/zen.toml)" # Load oh-my-posh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Load Fuzzyfinder
 # source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
