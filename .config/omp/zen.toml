@@ -47,14 +47,14 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     background = "transparent"
     foreground = "magenta"
-    template = " <b>@</b> "
+    template = " @ "
 
   [[blocks.segments]]
     type = "session"
     style = 'plain'
-    background = "transparent"
-    foreground = "magenta"
-    template = "{{ .HostName }}"
+    background = 'transparent'
+    foreground = '#81a1c1'
+    template = "<b>{{ .HostName }}</b>"
 
 [[blocks]]
   type = 'rprompt'
