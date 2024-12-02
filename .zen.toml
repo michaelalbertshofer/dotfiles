@@ -36,25 +36,32 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   alignment = 'right'
 
   [[blocks.segments]]
+    type = "os"
+    style = 'plain'
+    background = "transparent"
+    foreground = "white"
+    template = " "
+
+  [[blocks.segments]]
     type = "session"
     style = 'plain'
     background = "transparent"
-    foreground = "magenta"
+    foreground = "#81a1c1"
     template = "{{ .UserName }}"
 
   [[blocks.segments]]
-    type = "session"
+    type = "os"
     style = 'plain'
     background = "transparent"
-    foreground = "magenta"
-    template = " @ "
+    foreground = "white"
+    template = " {{ .Icon }} "
 
   [[blocks.segments]]
     type = "session"
     style = 'plain'
-    background = 'transparent'
-    foreground = '#81a1c1'
-    template = "<b>{{ .HostName }}</b>"
+    background = "transparent"
+    foreground = "#81a1c1"
+    template = "{{ .HostName }}"
 
 [[blocks]]
   type = 'rprompt'
