@@ -10,6 +10,13 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
+    type = "os"
+    style = 'plain'
+    background = "transparent"
+    foreground = "white"
+    template = " "
+
+  [[blocks.segments]]
     type = 'path'
     style = 'plain'
     background = 'transparent'
