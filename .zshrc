@@ -64,6 +64,8 @@ setopt hist_find_no_dups
 
 # -- Aliases ---
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time" # --no-user --no-permissions"
+alias macli-update='apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y && apt autoclean -y'
+
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
