@@ -14,7 +14,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     background = "transparent"
     foreground = "white"
-    template = " "
+    template = "  "
 
   [[blocks.segments]]
     type = 'path'
