@@ -64,8 +64,8 @@ setopt hist_find_no_dups
 
 # -- Aliases ---
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time" # --no-user --no-permissions"
-alias macli-update='apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y && apt autoclean -y'
-
+alias macli-update='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y && apt autoclean -y'
+alias deploy-to-swarm="bash ~/Code/Server/Cluster-s48/Scripts/update-service.sh"
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
