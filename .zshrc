@@ -7,7 +7,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # --- Oh-my-Posh ---
-export PATH=$PATH:${HOME}/.local/bin
+# export PATH=$PATH:${HOME}/.local/bin
 
 # -- Add in zsh Plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -37,16 +37,16 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # --- Load on Startup ---
 # eval "$(starship init zsh)" # Load Starship
-eval "$(oh-my-posh init zsh --config ~/.zen.toml)" # Load oh-my-posh
+# eval "$(oh-my-posh init zsh --config ~/.zen.toml)" # Load oh-my-posh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Load Fuzzyfinder
 # source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # --- Oh-my-Posh Ignore Terminal ---
 # Important, because Mac Terminal is unsupported
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh)"
-fi
+# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#   eval "$(oh-my-posh init zsh)"
+# fi
 
 # --- zsh History ---
 HISTSIZE=10000
