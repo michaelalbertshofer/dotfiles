@@ -111,6 +111,7 @@ _fzf_compgen_dir() {
 # --- Bat (better cat) ---
 export BAT_THEME='Nord'
 
-
+# --- Warp Warpify ---
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
 
 
