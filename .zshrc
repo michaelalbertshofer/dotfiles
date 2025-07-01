@@ -66,9 +66,9 @@ setopt hist_find_no_dups
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time" # --no-user --no-permissions"
 alias macli-update='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y'
 alias deploy-to-swarm="bash ~/Cluster-S48/Scripts/update-sv.sh"
-alias up="bash ~/scripts/docker-up.sh"
-alias down="bash ~/scripts/docker-down.sh"
-alias pull="bash ~/scripts/docker-pull.sh"
+alias up="bash ~/dotfiles/scripts/docker-up.sh"
+alias down="bash ~/dotfiles/scripts/docker-down.sh"
+alias pull="bash ~/dotfiles/scripts/docker-pull.sh"
 
 
 # --- Fuzzyfinder ---
