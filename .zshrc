@@ -68,6 +68,8 @@ alias macli-update='sudo apt update && sudo apt dist-upgrade -y && sudo apt auto
 alias deploy-to-swarm="bash ~/Cluster-S48/Scripts/update-sv.sh"
 alias up="bash ~/scripts/docker-up.sh"
 alias down="bash ~/scripts/docker-down.sh"
+alias pull="bash ~/scripts/docker-pull.sh"
+
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
