@@ -105,9 +105,9 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     "{{if eq .Code 0}}#b48ead{{end}}",
   ]
   background = 'transparent'
-  template = '❯ '
+  template = ''
 
 [secondary_prompt]
   foreground = '#b48ead'
   background = 'transparent'
-  template = '❯❯ '
+  template = ''
