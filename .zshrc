@@ -69,6 +69,7 @@ alias deploy-to-swarm="bash ~/Cluster-S48/Scripts/update-sv.sh"
 alias up="bash ~/dotfiles/scripts/docker-up.sh"
 alias down="bash ~/dotfiles/scripts/docker-down.sh"
 alias pull="bash ~/dotfiles/scripts/docker-pull.sh"
+alias lado="DOCKER_HOST=$(docker context inspect --format '{{.Endpoints.docker.Host}}') lazydocker"
 
 
 # --- Fuzzyfinder ---
