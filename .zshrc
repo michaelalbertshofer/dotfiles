@@ -7,8 +7,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # --- Oh-my-Posh ---
-# export PATH=$PATH:${HOME}/.local/bin
-
+export PATH=$PATH:${HOME}/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
 # -- Add in zsh Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
