@@ -27,7 +27,7 @@ palette = 'catppuccin_mocha'
 
 [os]
 disabled = false
-style = "fg:crust"
+style = "bold fg:crust"
 
 [os.symbols]
 Windows = ""
@@ -52,18 +52,18 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "fg:crust"
-style_root = "fg:crust"
-format = '[ $user]($style)'
+style_user = "fg:mauve"
+style_root = "bold fg:mauve"
+format = '[](fg:overlay0) [$user]($style)'
 
 [hostname]
 ssh_only = false
-style = "fg:crust"
+style = "bold fg:blue"
 format = '[$hostname]($style)'
 
 [directory]
 style = "fg:crust"
-format = "[  $path ]($style)"
+format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
@@ -152,7 +152,7 @@ disabled = false
 disabled = false
 success_symbol = '[❯](bold fg:blue)'
 error_symbol = '[❯](bold fg:red)'
-vimcmd_symbol = '[❮](bold fg:blue)'
+vimcmd_symbol = '[❮](bold fg:green)'
 vimcmd_replace_one_symbol = '[❮](bold fg:lavender)'
 vimcmd_replace_symbol = '[❮](bold fg:lavender)'
 vimcmd_visual_symbol = '[❮](bold fg:yellow)'
@@ -169,7 +169,7 @@ min_time_to_notify = 45000
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
 pink = "#f5c2e7"
-mauve = "#cba6f7"
+mauve = "#9b4bfc"
 red = "#f38ba8"
 maroon = "#eba0ac"
 peach = "#fab387"
@@ -178,7 +178,7 @@ green = "#a6e3a1"
 teal = "#94e2d5"
 sky = "#89dceb"
 sapphire = "#74c7ec"
-blue = "#89b4fa"
+blue = "#2f7fff"
 lavender = "#b4befe"
 text = "#cdd6f4"
 subtext1 = "#bac2de"
@@ -191,7 +191,7 @@ surface1 = "#45475a"
 surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
-crust = "#11111b"
+crust = "#606060"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
