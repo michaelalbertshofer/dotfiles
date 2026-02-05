@@ -18,12 +18,12 @@ $kotlin\
 $haskell\
 $python\
 $conda\
+$time\
 $line_break\
 $character"""
 
 right_format = """$cmd_duration"""
 
-palette = 'ma'
 
 [os]
 disabled = false
@@ -77,7 +77,7 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 # style = "fg:yellow"
-format = '[[ $symbol $branch ](fg:black)]($style)'
+format = '[[ [$symbol](fg:blue) $branch ](fg:black)]($style)'
 
 [git_status]
 # style = "bg:yellow"
@@ -143,7 +143,7 @@ ignore_base = false
 disabled = false
 time_format = "%R"
 # style = "bg:lavender"
-format = '[[  $time ](fg:black)]($style)'
+format = '[[ [󰥔](fg:blue) $time ](fg:black)]($style)'
 
 [line_break]
 disabled = false
@@ -159,33 +159,8 @@ vimcmd_visual_symbol = '[❮](bold fg:yellow)'
 
 [cmd_duration]
 show_milliseconds = true
-format = " in $duration "
+format = "[](bold fg:blue) in $duration "
 # style = "bg:lavender"
 disabled = false
 show_notifications = true
 min_time_to_notify = 45000
-
-[palettes.ma]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#9b4bfc"
-maroon = "#eba0ac"
-peach = "#fab387"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#888888"
-grey = "#cdcdcd"
