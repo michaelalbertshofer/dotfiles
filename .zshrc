@@ -70,7 +70,7 @@ alias up="bash ~/dotfiles/scripts/docker-up.sh"
 alias down="bash ~/dotfiles/scripts/docker-down.sh"
 alias pull="bash ~/dotfiles/scripts/docker-pull.sh"
 alias lado="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/lazdydocker/config:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
-
+alias dpsa='docker ps -a --format="table {{.Names}}\t{{.Image}}\t{{.Status}}"'
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
