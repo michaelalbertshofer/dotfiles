@@ -71,6 +71,7 @@ alias down="bash ~/dotfiles/scripts/docker-down.sh"
 alias pull="bash ~/dotfiles/scripts/docker-pull.sh"
 alias lado="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/lazdydocker/config:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
 alias dpsa='docker ps -a --format="table {{.Names}}\t{{.Image}}\t{{.Status}}"'
+alias duinfo='sudo du -h --max-depth=1 | sort -hr'
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
