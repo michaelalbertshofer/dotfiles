@@ -74,6 +74,7 @@ alias dpsa='docker ps -a --format="table {{.Names}}\t{{.Image}}\t{{.Status}}"'
 alias duinfo='sudo du -h --max-depth=1 | sort -hr'
 alias csd='docker exec -it traefik-crowdsec cscli decisions list'
 alias csm='docker exec -it traefik-crowdsec cscli metrics'
+alias csr='docker exec -it traefik-crowdsec cscli decisions delete -i $1'
 
 # --- Fuzzyfinder ---
 # --- fzf previews ---
